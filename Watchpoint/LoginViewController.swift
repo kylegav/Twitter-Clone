@@ -18,7 +18,7 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginButton(_ sender: Any) {
         TwitterAPICaller.client?.login(url: "https://api.twitter.com/oauth/request_token", success: {
-            print("Login Sucessful")
+            print("Login Sucess")
             self.performSegue(withIdentifier: "loginAction", sender: self)
         
         }, failure: { (Error) in
