@@ -68,6 +68,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Home" id="ybo-dI-Bpt">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="Oac-Du-Ry5">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="logoutButton:" destination="hhn-Dt-wvH" id="poE-8Q-ZfO"/>
                             </connections>
@@ -87,7 +88,10 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.098121628370000005" green="0.78758807180000001" blue="0.96620899439999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <textAttributes key="titleTextAttributes">
-                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                         <navigationBarAppearance key="standardAppearance"/>
                         <navigationBarAppearance key="scrollEdgeAppearance">
