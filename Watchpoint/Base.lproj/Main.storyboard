@@ -17,9 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7d7-MW-uo4">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7d7-MW-uo4">
                                 <rect key="frame" x="147" y="320" width="80" height="40"/>
-                                <autoresizingMask key="autoresizingMask"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Login"/>
                                 <connections>
@@ -29,6 +28,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3oN-n5-zLa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7d7-MW-uo4" firstAttribute="leading" secondItem="3oN-n5-zLa" secondAttribute="leading" constant="147" id="077-1y-LdV"/>
+                            <constraint firstItem="3oN-n5-zLa" firstAttribute="trailing" secondItem="7d7-MW-uo4" secondAttribute="trailing" constant="148" id="8ol-lB-vCw"/>
+                            <constraint firstItem="3oN-n5-zLa" firstAttribute="bottom" secondItem="7d7-MW-uo4" secondAttribute="bottom" constant="307" id="EyH-cD-5Dd"/>
+                            <constraint firstItem="7d7-MW-uo4" firstAttribute="top" secondItem="3oN-n5-zLa" secondAttribute="top" constant="320" id="tqC-aI-IW9"/>
+                        </constraints>
                     </view>
                     <connections>
                         <segue destination="g9n-Rw-5fW" kind="presentation" identifier="loginAction" id="VV0-KO-owF"/>
