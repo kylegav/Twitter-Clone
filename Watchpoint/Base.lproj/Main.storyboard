@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DES-7U-YHj">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -52,13 +51,51 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="s0X-Li-BM3">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tweetCell" rowHeight="89" id="s0X-Li-BM3" customClass="TweetCellTableViewCell" customModule="Watchpoint" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="89"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="s0X-Li-BM3" id="reI-yc-c5a">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="89"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="User Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VPd-Tr-hwO">
+                                            <rect key="frame" x="66" y="0.0" width="95" height="22"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P80-JY-p8N">
+                                            <rect key="frame" x="66" y="28" width="348" height="61"/>
+                                            <string key="text">This is a Tweet, with many thoughts that need to be shared. This tweet will determine the hight of the cell so the entire tweet is displayed properly. </string>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TGb-60-Lzl">
+                                            <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="60" id="NzS-LG-6oe"/>
+                                                <constraint firstAttribute="width" constant="60" id="hSp-lV-DzK"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="P80-JY-p8N" firstAttribute="top" secondItem="VPd-Tr-hwO" secondAttribute="bottom" constant="6" id="MaL-xn-mKL"/>
+                                        <constraint firstItem="TGb-60-Lzl" firstAttribute="leading" secondItem="reI-yc-c5a" secondAttribute="leading" id="NW8-Jm-J6U"/>
+                                        <constraint firstItem="VPd-Tr-hwO" firstAttribute="leading" secondItem="TGb-60-Lzl" secondAttribute="trailing" constant="6" id="VJq-hY-Ys1"/>
+                                        <constraint firstItem="P80-JY-p8N" firstAttribute="leading" secondItem="TGb-60-Lzl" secondAttribute="trailing" constant="6" id="Vte-UQ-4ih"/>
+                                        <constraint firstItem="VPd-Tr-hwO" firstAttribute="top" secondItem="reI-yc-c5a" secondAttribute="top" id="eBr-ym-D8B"/>
+                                        <constraint firstAttribute="trailing" secondItem="P80-JY-p8N" secondAttribute="trailing" id="f3m-2e-q3F"/>
+                                        <constraint firstItem="VPd-Tr-hwO" firstAttribute="top" secondItem="reI-yc-c5a" secondAttribute="top" id="hc6-c3-hVD"/>
+                                        <constraint firstItem="TGb-60-Lzl" firstAttribute="top" secondItem="reI-yc-c5a" secondAttribute="top" id="hpx-Px-dTf"/>
+                                        <constraint firstAttribute="bottom" secondItem="P80-JY-p8N" secondAttribute="bottom" id="mN2-gj-Um1"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="userNameTweetCell" destination="VPd-Tr-hwO" id="kGl-2U-fXo"/>
+                                    <outlet property="userProfileTweetCell" destination="TGb-60-Lzl" id="1Hz-Ch-4m3"/>
+                                    <outlet property="userTweetTweetCell" destination="P80-JY-p8N" id="d7z-qi-BdS"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -77,7 +114,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WWx-Z3-T3t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="500" y="831"/>
+            <point key="canvasLocation" x="500.00000000000006" y="830.35714285714278"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6a4-hs-hpH">

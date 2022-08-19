@@ -16,12 +16,28 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    // Skip login process if "userIsLoggedIn" is true
+    override func viewDidAppear(_ animated: Bool) {
+        if UserDefaults.standard.bool(forKey: "userIsLoggedIn") == true {
+            
+            self.performSegue(withIdentifier: "loginAction", sender: self)
+    
+        }
+    }
+    
     @IBAction func loginButton(_ sender: Any) {
         TwitterAPICaller.client?.login(url: "https://api.twitter.com/oauth/request_token", success: {
+            
+            // Debugging Text Output
             print("Login Sucess")
+            
+            UserDefaults.standard.set(true, forKey: "userIsLoggedIn")
+            
             self.performSegue(withIdentifier: "loginAction", sender: self)
         
         }, failure: { (Error) in
+            
+            // Debugging Text Output
             print("Login Failed")
         })
     }
