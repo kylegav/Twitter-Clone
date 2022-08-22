@@ -9,7 +9,11 @@
 import UIKit
 
 class HomeTableViewController: UITableViewController {
-
+    
+    
+    var tweetArray = [NSDictionary]()
+    var tweetQuantity: Int!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,6 +22,33 @@ class HomeTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    func getTweets() {
+        
+        let twitterTimelineURL = "https://api.twitter.com/1.1/statuses/home_timeline.json"
+        
+        let timelineParams = ["count": 20]
+        
+        
+        TwitterAPICaller.client?.getDictionariesRequest(url: twitterTimelineURL, parameters: timelineParams, success: { (tweets: [NSDictionary] ) in
+            
+            self.tweetArray.removeAll()
+            
+            for tweet in tweets {
+                
+                self.tweetArray.append(tweet)
+                
+            }
+    
+        }, failure: { (Error) in
+            print("Failed to Grab Tweets")
+        })
+        
+    
+        
+        
+        
     }
 
     @IBAction func logoutButton(_ sender: Any) {
