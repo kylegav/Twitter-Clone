@@ -24,9 +24,11 @@ class ComposeTweetViewController: UIViewController {
             TwitterAPICaller.client?.postTweet(tweetString: tweetText.text, success:{
                 self.dismiss(animated:true, completion: nil)
             }, failure: { (error) in
-                print("Error posting Tweet")
+                print("Error posting Tweet \(error)")
                 self.dismiss(animated:true, completion: nil)
             })
+        } else {
+            self.dismiss(animated:true, completion: nil)
         }
         
         
@@ -35,6 +37,7 @@ class ComposeTweetViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tweetText.becomeFirstResponder()
 
         // Do any additional setup after loading the view.
     }
