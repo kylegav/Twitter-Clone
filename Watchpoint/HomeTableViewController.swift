@@ -14,12 +14,20 @@ class HomeTableViewController: UITableViewController {
     var tweetArray = [NSDictionary]()
     var tweetQuantity: Int!
     
+    let homeTableRefreshControl = UIRefreshControl()
+    
+      
     override func viewDidLoad() {
         super.viewDidLoad()
         getTweets()
+        
+        homeTableRefreshControl.addTarget(self, action: #selector(getTweets), for:  .valueChanged)
+        tableView.refreshControl = homeTableRefreshControl
     }
     
-    func getTweets() {
+    @objc func getTweets() {
+        
+        tweetQuantity = 20
         
         let twitterTimelineUrl = "https://api.twitter.com/1.1/statuses/home_timeline.json"
         
@@ -36,12 +44,41 @@ class HomeTableViewController: UITableViewController {
                 
             }
             self.tableView.reloadData()
+            self.homeTableRefreshControl.endRefreshing()
             
             print("Get Tweet Success")
         }, failure: { (Error) in
             print("Failed to Grab Tweets")
             print(Error.localizedDescription)
         })
+        
+    }
+    
+    func getMoreTweets() {
+        let twitterTimelineUrl = "https://api.twitter.com/1.1/statuses/home_timeline.json"
+        
+        tweetQuantity += 20
+        
+        let timelineParams = ["count": tweetQuantity]
+        
+        TwitterAPICaller.client?.getDictionariesRequest(url: twitterTimelineUrl, parameters: timelineParams, success: { (tweets: [NSDictionary] ) in
+            
+            self.tweetArray.removeAll()
+            
+            for tweet in tweets {
+                
+                self.tweetArray.append(tweet)
+                
+            }
+            self.tableView.reloadData()
+            self.homeTableRefreshControl.endRefreshing()
+            
+            print("Get Tweet Success")
+        }, failure: { (Error) in
+            print("Failed to Grab Tweets")
+            print(Error.localizedDescription)
+        })
+        
         
     }
 
@@ -80,6 +117,13 @@ class HomeTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return tweetArray.count
+    }
+    
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
+        if indexPath.row + 1 == tweetArray.count {
+            getMoreTweets()
+        }
     }
 
     /*

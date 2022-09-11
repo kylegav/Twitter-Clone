@@ -35,7 +35,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="g9n-Rw-5fW" kind="presentation" identifier="loginAction" id="VV0-KO-owF"/>
+                        <segue destination="g9n-Rw-5fW" kind="showDetail" identifier="loginAction" id="VV0-KO-owF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VHz-kr-U1A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
