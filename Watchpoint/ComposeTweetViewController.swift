@@ -20,6 +20,15 @@ class ComposeTweetViewController: UIViewController {
     
     @IBAction func composeTweetSend(_ sender: Any) {
         
+        if (!tweetText.text.isEmpty) {
+            TwitterAPICaller.client?.postTweet(tweetString: tweetText.text, success:{
+                self.dismiss(animated:true, completion: nil)
+            }, failure: { (error) in
+                print("Error posting Tweet")
+                self.dismiss(animated:true, completion: nil)
+            })
+        }
+        
         
     }
     
