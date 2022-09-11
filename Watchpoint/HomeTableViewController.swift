@@ -34,7 +34,7 @@ class HomeTableViewController: UITableViewController {
         let timelineParams = ["count": 40]
         
         
-        TwitterAPICaller.client?.getDictionariesRequest(url: twitterTimelineUrl, parameters: timelineParams, success: { (tweets: [NSDictionary] ) in
+        TwitterAPICaller.client?.getDictionariesRequest(url: twitterTimelineUrl, parameters: timelineParams as [String: Any], success: { (tweets: [NSDictionary] ) in
             
             self.tweetArray.removeAll()
             
@@ -61,7 +61,7 @@ class HomeTableViewController: UITableViewController {
         
         let timelineParams = ["count": tweetQuantity]
         
-        TwitterAPICaller.client?.getDictionariesRequest(url: twitterTimelineUrl, parameters: timelineParams, success: { (tweets: [NSDictionary] ) in
+        TwitterAPICaller.client?.getDictionariesRequest(url: twitterTimelineUrl, parameters: timelineParams as [String : Any], success: { (tweets: [NSDictionary] ) in
             
             self.tweetArray.removeAll()
             
