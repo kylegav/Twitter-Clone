@@ -10,6 +10,20 @@ import UIKit
 
 class ComposeTweetViewController: UIViewController {
 
+    @IBOutlet weak var tweetText: UITextView!
+    
+    @IBAction func composeTweetCancel(_ sender: Any) {
+        
+        dismiss(animated: true, completion: nil)
+        
+    }
+    
+    @IBAction func composeTweetSend(_ sender: Any) {
+        
+        
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

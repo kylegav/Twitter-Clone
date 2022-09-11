@@ -112,6 +112,9 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Tweet" id="KAi-F7-i79">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="C0N-B3-s2F" kind="presentation" id="v6P-Xe-qt6"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
@@ -124,11 +127,11 @@
             <objects>
                 <viewController id="5sJ-pd-wb0" customClass="ComposeTweetViewController" customModule="Watchpoint" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CWF-9X-HGD">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dRB-8g-pWT">
-                                <rect key="frame" x="6" y="94" width="402" height="198"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dRB-8g-pWT">
+                                <rect key="frame" x="6" y="62" width="402" height="210"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor"/>
@@ -139,13 +142,27 @@
                         <viewLayoutGuide key="safeArea" id="ZKZ-Kj-nH1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="ZKZ-Kj-nH1" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="dRB-8g-pWT" secondAttribute="bottom" constant="570" id="0S8-iW-j4s"/>
+                            <constraint firstItem="ZKZ-Kj-nH1" firstAttribute="bottom" secondItem="dRB-8g-pWT" secondAttribute="bottom" constant="570" id="5xu-WU-rPs"/>
                             <constraint firstItem="ZKZ-Kj-nH1" firstAttribute="trailing" secondItem="dRB-8g-pWT" secondAttribute="trailing" constant="6" id="LjJ-de-TUZ"/>
                             <constraint firstItem="dRB-8g-pWT" firstAttribute="top" secondItem="ZKZ-Kj-nH1" secondAttribute="top" constant="6" id="Mio-K5-GSM"/>
                             <constraint firstItem="dRB-8g-pWT" firstAttribute="leading" secondItem="ZKZ-Kj-nH1" secondAttribute="leading" constant="6" id="SnV-T8-3hH"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="M9u-6h-ZGq"/>
+                    <navigationItem key="navigationItem" id="M9u-6h-ZGq">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="YBX-Z7-rW0">
+                            <connections>
+                                <action selector="composeTweetCancel:" destination="5sJ-pd-wb0" id="EvP-HF-nj2"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Send" id="fgZ-DA-j6n">
+                            <connections>
+                                <action selector="composeTweetSend:" destination="5sJ-pd-wb0" id="WR4-MB-hwA"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tweetText" destination="dRB-8g-pWT" id="hfy-Kb-xUO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jNd-50-8PW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -184,7 +201,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="C0N-B3-s2F" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="UfU-Bq-rYS">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
