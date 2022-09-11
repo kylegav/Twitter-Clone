@@ -16,6 +16,7 @@
 		C544D7F528AED93000F57186 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C544D7F428AED93000F57186 /* LoginViewController.swift */; };
 		C544D7F728B0437100F57186 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C544D7F628B0437100F57186 /* HomeTableViewController.swift */; };
 		C544D7F928B050C700F57186 /* TweetCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C544D7F828B050C700F57186 /* TweetCellTableViewCell.swift */; };
+		C5572B7028CE6F6F007DAE83 /* ComposeTweetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5572B6F28CE6F6F007DAE83 /* ComposeTweetViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		C544D7F428AED93000F57186 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C544D7F628B0437100F57186 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		C544D7F828B050C700F57186 /* TweetCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCellTableViewCell.swift; sourceTree = "<group>"; };
+		C5572B6F28CE6F6F007DAE83 /* ComposeTweetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeTweetViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				C544D7F428AED93000F57186 /* LoginViewController.swift */,
+				C5572B6F28CE6F6F007DAE83 /* ComposeTweetViewController.swift */,
 				6EBCF54D21E71F9400451C03 /* Launch Screen.storyboard */,
 				6EBCF52921DF07FC00451C03 /* Main.storyboard */,
 				C544D7F828B050C700F57186 /* TweetCellTableViewCell.swift */,
@@ -209,6 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5572B7028CE6F6F007DAE83 /* ComposeTweetViewController.swift in Sources */,
 				C544D7F728B0437100F57186 /* HomeTableViewController.swift in Sources */,
 				C544D7F528AED93000F57186 /* LoginViewController.swift in Sources */,
 				6EBCF54421E047A500451C03 /* TwitterAPICaller.swift in Sources */,

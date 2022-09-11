@@ -110,11 +110,46 @@
                                 <action selector="logoutButton:" destination="hhn-Dt-wvH" id="poE-8Q-ZfO"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Tweet" id="KAi-F7-i79">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WWx-Z3-T3t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="500.00000000000006" y="830.35714285714278"/>
+        </scene>
+        <!--Compose Tweet View Controller-->
+        <scene sceneID="KIw-7m-XHD">
+            <objects>
+                <viewController id="5sJ-pd-wb0" customClass="ComposeTweetViewController" customModule="Watchpoint" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CWF-9X-HGD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dRB-8g-pWT">
+                                <rect key="frame" x="6" y="94" width="402" height="198"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ZKZ-Kj-nH1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZKZ-Kj-nH1" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="dRB-8g-pWT" secondAttribute="bottom" constant="570" id="0S8-iW-j4s"/>
+                            <constraint firstItem="ZKZ-Kj-nH1" firstAttribute="trailing" secondItem="dRB-8g-pWT" secondAttribute="trailing" constant="6" id="LjJ-de-TUZ"/>
+                            <constraint firstItem="dRB-8g-pWT" firstAttribute="top" secondItem="ZKZ-Kj-nH1" secondAttribute="top" constant="6" id="Mio-K5-GSM"/>
+                            <constraint firstItem="dRB-8g-pWT" firstAttribute="leading" secondItem="ZKZ-Kj-nH1" secondAttribute="leading" constant="6" id="SnV-T8-3hH"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="M9u-6h-ZGq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jNd-50-8PW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2466.666666666667" y="838.39285714285711"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6a4-hs-hpH">
@@ -143,8 +178,29 @@
             </objects>
             <point key="canvasLocation" x="-418" y="831"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wla-aI-COP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="C0N-B3-s2F" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UfU-Bq-rYS">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="5sJ-pd-wb0" kind="relationship" relationship="rootViewController" id="c7D-2m-pTl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tuA-hl-gr5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1557.9710144927537" y="838.39285714285711"/>
+        </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
