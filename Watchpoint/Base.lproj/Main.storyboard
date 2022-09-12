@@ -113,7 +113,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Tweet" id="KAi-F7-i79">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <segue destination="C0N-B3-s2F" kind="presentation" id="v6P-Xe-qt6"/>
+                                <segue destination="C0N-B3-s2F" kind="presentation" modalPresentationStyle="fullScreen" id="v6P-Xe-qt6"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -127,11 +127,11 @@
             <objects>
                 <viewController id="5sJ-pd-wb0" customClass="ComposeTweetViewController" customModule="Watchpoint" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CWF-9X-HGD">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dRB-8g-pWT">
-                                <rect key="frame" x="6" y="62" width="402" height="210"/>
+                                <rect key="frame" x="6" y="94" width="402" height="198"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor"/>
@@ -201,7 +201,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="C0N-B3-s2F" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="UfU-Bq-rYS">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
