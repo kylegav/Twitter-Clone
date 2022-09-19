@@ -78,14 +78,11 @@
 		6EBCF52421DF07FC00451C03 /* Watchpoint */ = {
 			isa = PBXGroup;
 			children = (
-				C544D7F428AED93000F57186 /* LoginViewController.swift */,
-				C5572B6F28CE6F6F007DAE83 /* ComposeTweetViewController.swift */,
-				6EBCF54D21E71F9400451C03 /* Launch Screen.storyboard */,
-				6EBCF52921DF07FC00451C03 /* Main.storyboard */,
-				C544D7F828B050C700F57186 /* TweetCellTableViewCell.swift */,
-				C544D7F628B0437100F57186 /* HomeTableViewController.swift */,
-				6EBCF54321E047A500451C03 /* TwitterAPICaller.swift */,
-				6EBCF52521DF07FC00451C03 /* AppDelegate.swift */,
+				C5FBB6DD28D8AB62003CC5A3 /* Delegates */,
+				C5FBB6DC28D8AB48003CC5A3 /* API */,
+				C5FBB6DB28D8AB33003CC5A3 /* Cells */,
+				C5FBB6DA28D8AB21003CC5A3 /* Storyboards */,
+				C5FBB6D928D8AB0B003CC5A3 /* View Controllers */,
 				37D29B8521F90E3400984A88 /* Assets.xcassets */,
 				6EBCF53121DF07FE00451C03 /* Info.plist */,
 			);
@@ -98,6 +95,49 @@
 				872C2D82F41D5A5D2A920E9E /* Pods_Twitter.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C5FBB6D928D8AB0B003CC5A3 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C544D7F428AED93000F57186 /* LoginViewController.swift */,
+				C5572B6F28CE6F6F007DAE83 /* ComposeTweetViewController.swift */,
+				C544D7F628B0437100F57186 /* HomeTableViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		C5FBB6DA28D8AB21003CC5A3 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				6EBCF54D21E71F9400451C03 /* Launch Screen.storyboard */,
+				6EBCF52921DF07FC00451C03 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		C5FBB6DB28D8AB33003CC5A3 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C544D7F828B050C700F57186 /* TweetCellTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		C5FBB6DC28D8AB48003CC5A3 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				6EBCF54321E047A500451C03 /* TwitterAPICaller.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		C5FBB6DD28D8AB62003CC5A3 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				6EBCF52521DF07FC00451C03 /* AppDelegate.swift */,
+			);
+			path = Delegates;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
